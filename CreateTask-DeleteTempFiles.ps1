@@ -1,5 +1,4 @@
 ﻿#This script generates and schedules a powershell script that deletes .tmp, .xls, and .xlsx files generated within the C:\Windows\Temp directory
-#This is intended for use in automating Maintenance activity by Cloud Operations personnel. 
 #WARNING: This script creates a destructive automation. Ensure proper backups are in place.
   
 #$Path is where the generated file will live. Ideally C:\Staging
