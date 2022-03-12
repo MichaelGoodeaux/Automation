@@ -1,5 +1,4 @@
-﻿# This script creates the DeleteIISLog.ps1 file and sets it to run automatically once a week via Task Scheduler.
-# This script is intended for the automation of this maintenance item by Cloud Operations
+# This script creates the DeleteIISLog.ps1 file and sets it to run automatically once a week via Task Scheduler.
 # WARNING: This script creates an automation that is destructive. Ensure all backups are in place. 
 
 #$Path is where the generated file will live. 
@@ -15,3 +14,4 @@
 	$Settings = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Hours 2)
 	$task = New-ScheduledTask -Action $action -Principal $Principal -Trigger $Trigger -Settings $Settings
 	Register-ScheduledTask DeleteIISLogFiles -InputObject $task
+	
